@@ -52,6 +52,20 @@
             margin: auto;
         }
 
+        .flex-gap {
+          display: flex;
+          align-items: center; /* or justify-content: center; if needed */
+          gap: 1rem; /* Adjust spacing as desired */
+        }
+
+        .eid-button{
+            cursor: pointer;
+            padding-left: 10px !important;
+            padding-right: 10px !important;
+            letter-spacing: 0.1em !important;
+        }
+
+
         @media (max-width: 768px) {
             #cardPreviewContainer {
                 max-width: 90%;
@@ -162,7 +176,7 @@
                 class="w-full px-4 py-3 rounded-xl bg-white/50 text-gray-800 placeholder-gray-500 focus:ring-2 focus:ring-gray-300 focus:outline-none transition-all duration-300">
             <div class="flex space-x-4">
                 <button id="downloadCardButton"
-                    class="w-full bg-gray-700 hover:bg-gray-600 text-white font-abu-sayed py-3 rounded-xl text-md transition-colors duration-300 flex items-center justify-center space-x-2">
+                    class="w-full bg-gray-700 hover:bg-gray-600 text-white font-abu-sayed py-3 rounded-xl text-md transition-colors duration-300 flex items-center justify-center space-x-2 eid-button">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
                         <path fill-rule="evenodd"
                             d="M12 2.25a.75.75 0 0 1 .75.75v11.69l3.22-3.22a.75.75 0 1 1 1.06 1.06l-4.5 4.5a.75.75 0 0 1-1.06 0l-4.5-4.5a.75.75 0 1 1 1.06-1.06l3.22 3.22V3a.75.75 0 0 1 .75-.75Zm-9 13.5a.75.75 0 0 1 .75.75v2.25a1.5 1.5 0 0 0 1.5 1.5h13.5a1.5 1.5 0 0 0 1.5-1.5V16.5a.75.75 0 0 1 1.5 0v2.25a3 3 0 0 1-3 3H5.25a3 3 0 0 1-3-3V16.5a.75.75 0 0 1 .75-.75Z"
@@ -171,7 +185,7 @@
                     <span>ডাউনলোড</span>
                 </button>
                 <button id="shareCardButton"
-                    class="w-full bg-blue-600 hover:bg-blue-500 text-white py-3 rounded-xl font-abu-sayed text-md transition-colors duration-300 flex items-center justify-center space-x-2">
+                    class="w-full bg-blue-600 hover:bg-blue-500 text-white py-3 rounded-xl font-abu-sayed text-md transition-colors duration-300 flex items-center justify-center space-x-2 eid-button">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
                         <path fill-rule="evenodd"
                             d="M15.75 4.5a3 3 0 1 1 .825 2.066l-8.421 4.679a3.002 3.002 0 0 1 0 1.51l8.421 4.679a3 3 0 1 1-.729 1.31l-8.421-4.678a3 3 0 1 1 0-4.132l8.421-4.679a3 3 0 0 1-.096-.755Z"
@@ -180,7 +194,7 @@
                     <span>শেয়ার</span>
                 </button>
                 <button id="downloadQRCodeButton"
-                    class="w-full bg-blue-600 hover:bg-blue-500 text-white py-3 rounded-xl font-abu-sayed text-md transition-colors duration-300 flex items-center justify-center space-x-2">
+                    class="w-full bg-blue-600 hover:bg-blue-500 text-white py-3 rounded-xl font-abu-sayed text-md transition-colors duration-300 flex items-center justify-center space-x-2 eid-button">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="size-6">
                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -190,8 +204,38 @@
                     </svg>
                 </button>
             </div>
-            <div class="flex justify-center items-center">
-                <svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" width="100"  viewBox="0 0 784.5 200.19"  class="pt-2 mx-auto md:mx-1">
+
+            <div class="justify-center items-center">
+                    <p >
+                        অ্যাডমিশনের সকল আপডেট পেতে জয়েন হন <a href="https://t.me/admissionnewscorner" target="_blank"  rel="noopener noreferrer">Admission News Corner </a>-এর টেলিগ্রাম চ্যানেলে<br>
+                    </p>
+                    <a href="https://t.me/admissionnewscorner" target="_blank"  rel="noopener noreferrer">
+                        <svg width="160" height="50" viewBox="0 0 160 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Main Button Background with more width for padding -->
+                            <path d="M155 0H31V32H155C157.761 32 160 29.7614 160 27V5C160 2.23858 157.761 0 155 0Z" fill="#0F1418"/>
+                            <!-- Icon Section Background -->
+                            <path d="M31 0H5C2.23858 0 0 2.23858 0 5V27C0 29.7614 2.23858 32 5 32H31V0Z" fill="#2BA7DD"/>
+                            <!-- Telegram Icon -->
+                            <path d="M26.9477 8.23175L23.326 25.3118C23.0527 26.5173 22.3402 26.8173 21.3276 26.2494L15.8092 22.183L13.1465 24.7439C12.8518 25.0386 12.6054 25.2851 12.0375 25.2851L12.4339 19.6649L22.6616 10.423C23.1063 10.0266 22.5652 9.80689 21.9705 10.2034L9.32652 18.1648L3.88317 16.4611C2.69914 16.0914 2.67771 15.277 4.12962 14.7091L25.4208 6.5066C26.4066 6.13692 27.2692 6.72626 26.9477 8.23175Z" fill="white"/>
+                            <!-- Text "JOIN ON TELEGRAM" with extra padding -->
+                            <text x="38" y="20" font-family="Arial, sans-serif" font-size="10" fill="white" font-weight="bold">JOIN ON TELEGRAM</text>
+                            <!-- Gradient Overlay -->
+                            <path d="M155 0H5C2.23858 0 0 2.23858 0 5V27C0 29.7614 2.23858 32 5 32H155C157.761 32 160 29.7614 160 27V5C160 2.23858 157.761 0 155 0Z" fill="url(#paint0_linear)"/>
+                            <defs>
+                              <linearGradient id="paint0_linear" x1="0" y1="0" x2="0" y2="32" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#BBBBBB" stop-opacity="0.1"/>
+                                <stop offset="1" stop-opacity="0.1"/>
+                              </linearGradient>
+                            </defs>
+                          </svg></a>
+                        
+                          
+                          
+
+            </div>
+            <div class="flex justify-center items-center flex-gap">
+                <a href="https://cornq.com/" target="_blank"  rel="noopener noreferrer"> 
+                    <svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" width="100"  viewBox="0 0 784.5 200.19"  class="pt-2 mx-auto md:mx-1">
                     <g id="svg5">
                       <g id="Layer_2-2" data-name="Layer_2">
                         <g id="Layer_1-2">
@@ -203,7 +247,9 @@
                         </g>
                       </g>
                     </g>
-                  </svg>
+                  </svg> 
+                </a>
+                <a href="https://codepotro.com/" target="_blank"  rel="noopener noreferrer">
                 <svg xmlns="http://www.w3.org/2000/svg" class="pt-2 mx-auto md:mx-1"
                     xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="50" viewBox="0 0 1377.5643 180.6184">
                     <defs>
@@ -263,6 +309,7 @@
                         </g>
                     </g>
                 </svg>
+            </a>
             </div>
         </div>
     </div>
